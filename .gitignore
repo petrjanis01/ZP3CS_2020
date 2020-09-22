@@ -411,3 +411,6 @@ core/css/
 core/loader/
 .stencil/
 angular/build/
+
+# other
+/Projects_last_year
