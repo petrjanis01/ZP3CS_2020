@@ -1,6 +1,6 @@
-1. Vytvořte jednoduchou kalkulačku(konzolová aplikace), která od uživatele přečte jako první operaci(+, -, *, /). Dále počet operandů. A následně tolik operandů, kolik bylo specifikováno v minulém vstupu. Ošetřete neplatné vstupy (i dělení nulou) a vypište výsledek na obrazovku. Nezapomeňte na desetinná místa u dělení.
+1. Vytvořte jednoduchou kalkulačku(konzolová aplikace), která od uživatele přečte jako první operaci(+, -, *, /). Dále počet operandů. A následně tolik operandů, kolik bylo specifikováno v minulém vstupu. Apikuje operaci na všechny operandy. Ošetřete neplatné vstupy (i dělení nulou) a vypište výsledek na obrazovku. Nezapomeňte na desetinná místa u dělení.
 
-2. Rozšiřte kalkulačku tak, aby uměla umocňovat.
+2. Rozšiřte kalkulačku tak, aby uměla umocňovat. ^
 
 3. Vypište na 1000x své jméno bez použití cyklů.
 

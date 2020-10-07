@@ -1,0 +1,14 @@
+Upravte projekt L3_Exercise_Solution:
+1) Přidejte vhodné ovládací prvky (inputy) pro složky barvy (R,G,B) a jejich popisky. Nastavte jejich výchozí hodnotu na 0.
+
+2) Na změnu textu v inputech proveďte kontrolu správnosti vstupu od uživatele. Pokud zadaný znak není číslo nebo není v rozsahu 0-255, nastavte jeho hodnotu na 0.
+
+3) Přidejte vhodný ovládací prvek, který bude po každé změně vykreslovat barvu v inputech => vytvořte struct Color z inputů (R,G,B)
+
+4) Přidejte input pro zadáni jména barvy.
+
+5) Změňte typ kolekce _colors, aby se dala uložit nově vytvořená barva i se jménem. Pokud se zadané jméno již v kolekci nachází, informuje o tom uživatele a barvu nepřidá.
+
+6) Přidejte tlačítko pro uložení barvy s jeho jménem (všechno musí byt vyplněno). Na kliknutí uložte do kolekce _colors a automaticky i do drop down listu (combo-boxu). V drop down listu budou zobrazeny pouze jména barev. 
+
+Ověření - musí fungovat stejně jako 'mnou předdefinované' barvy... čili po vybraní v drop downu a kliknutí na tlačítko show selected color se vykresli.

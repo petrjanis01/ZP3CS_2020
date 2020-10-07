@@ -7,6 +7,11 @@ namespace Lecture2
     {
         static void Main(string[] args)
         {
+            //Console.WriteLine(StringBuilderExample());
+            Console.Write("Press some key: ");
+            // returns ASCII representation
+            char charInput = (char)Console.Read();
+            Console.WriteLine(charInput);
         }
 
         static void StringBasics()
@@ -120,9 +125,15 @@ namespace Lecture2
             var userInput = Console.ReadLine();
             int number;
 
-            // demonstrate exception
-            number = int.Parse(userInput);
-            Console.WriteLine(number + 1);
+            try
+            {
+                number = int.Parse(userInput);
+                Console.WriteLine(number + 1);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(":(");
+            }
 
             int number2;
             if (int.TryParse(userInput, out number2) == false)
