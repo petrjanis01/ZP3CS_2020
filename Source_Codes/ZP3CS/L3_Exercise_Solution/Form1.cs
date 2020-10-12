@@ -11,6 +11,7 @@ namespace L3_Exercise_Solution
         public Form1()
         {
             InitializeComponent();
+
             LoadColors();
             AddColorsToDropDown();
         }
@@ -31,6 +32,7 @@ namespace L3_Exercise_Solution
         {
             foreach (var color in _colors)
             {
+                // Items is property that represents items that will be shown to user in drop down.
                 colorDropDown.Items.Add(color);
             }
         }

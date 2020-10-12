@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lecture2", "Lecture2\Lectur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L2_Exercise_Solution", "L2_Exercise_Solution\L2_Exercise_Solution.csproj", "{9A50B276-3460-4850-9A8B-8F2C5FDD6F74}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lecture3_Sources", "Lecture3_Sources", "{05F06BB0-A858-4ECE-A014-09BA9BDF5F50}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lecture3-4_Sources", "Lecture3-4_Sources", "{05F06BB0-A858-4ECE-A014-09BA9BDF5F50}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture3", "Lecture3\Lecture3.csproj", "{E3D878F4-9847-4088-9678-5C765E7C779C}"
 EndProject
