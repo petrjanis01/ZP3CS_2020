@@ -3,7 +3,7 @@ Upravte projekt L3_Exercise_Solution:
 
 2) Na změnu textu v inputech proveďte kontrolu správnosti vstupu od uživatele. Pokud zadaný znak není číslo nebo není v rozsahu 0-255, nastavte jeho hodnotu na 0.
 
-3) Přidejte vhodný ovládací prvek, který bude po každé změně vykreslovat barvu v inputech => vytvořte struct Color z inputů (R,G,B)
+3) Přidejte vhodný ovládací prvek, který bude po každé změně vykreslovat barvu v inputech => vytvořte struct Color z inputů (R,G,B). Použíjte už definovaný struct.
 
 4) Přidejte input pro zadáni jména barvy.
 
