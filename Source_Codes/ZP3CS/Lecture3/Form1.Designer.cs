@@ -33,6 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.explanationTextBox = new System.Windows.Forms.TextBox();
             this.addButton = new System.Windows.Forms.Button();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SearchButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -77,11 +80,40 @@
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Location = new System.Drawing.Point(52, 62);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(216, 20);
+            this.searchTextBox.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Search";
+            // 
+            // SearchButton
+            // 
+            this.SearchButton.Location = new System.Drawing.Point(309, 62);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(75, 23);
+            this.SearchButton.TabIndex = 7;
+            this.SearchButton.Text = "Search";
+            this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 127);
+            this.Controls.Add(this.SearchButton);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.explanationTextBox);
             this.Controls.Add(this.label2);
@@ -101,6 +133,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox explanationTextBox;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.TextBox searchTextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button SearchButton;
     }
 }
 

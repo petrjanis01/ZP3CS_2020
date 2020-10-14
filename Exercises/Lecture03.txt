@@ -12,3 +12,10 @@ Upravte projekt L3_Exercise_Solution:
 6) Přidejte tlačítko pro uložení barvy s jeho jménem (všechno musí byt vyplněno). Na kliknutí uložte do kolekce _colors a automaticky i do drop down listu (combo-boxu). V drop down listu budou zobrazeny pouze jména barev. 
 
 Ověření - musí fungovat stejně jako 'mnou předdefinované' barvy... čili po vybraní v drop downu a kliknutí na tlačítko show selected color se vykresli.
+
+7) pridejte label, ktery bude po kazde zmene v inputech (R,G,B) ukazovat jeji hodnotu v html codu (hexadecimal)
+
+8) pridejte tlacitko, ktere vsechny barvy v kolekci _colors ulozi jako html code do souboru colors.txt ve fromatu:
+	 "pojmenovani html code"
+
+9) pridejte tlacitko, ktere nacte barvy ze souboru colors.txt a ulozi je do kolekce i drop down listu (jen pokud jiz v kolekci nejsou)

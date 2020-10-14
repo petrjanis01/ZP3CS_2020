@@ -15,6 +15,7 @@ namespace Lecture3
             InitializeComponent();
 
             dictionary = new Dictionary<string, string>();
+
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -48,7 +49,14 @@ namespace Lecture3
             explanationTextBox.Text = string.Empty;
         }
 
-        // TODO add another text box for search
-        // TODO add button that reads value from text box and shows dialog with explanation for that word
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            var word = searchTextBox.Text;
+
+            if (dictionary.ContainsKey(word))
+            {
+                MessageBox.Show($@"{dictionary[word]}");
+            }
+        }
     }
 }
