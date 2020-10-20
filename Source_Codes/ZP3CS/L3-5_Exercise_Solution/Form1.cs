@@ -98,6 +98,16 @@ namespace L3_Exercise_Solution
 
             // Shows color in panel.
             RGBColorPanel.BackColor = color;
+
+            // Transforms color into html color code (hexadecimal form).
+            htmlColorLabel.Text = $@"{ColorTranslator.ToHtml(color)}";
+
+            // Other way to do this:
+            var redHexadecimal = int.Parse(textBoxRed.Text).ToString("X2");
+            var greenHexadecimal = int.Parse(textBoxGreen.Text).ToString("X2");
+            var blueHexadecimal = int.Parse(textBoxBlue.Text).ToString("X2");
+
+            htmlColorConvertedLabel.Text = "#" + redHexadecimal + greenHexadecimal + blueHexadecimal;
         }
 
         private void SaveColorButton_Click(object sender, EventArgs e)

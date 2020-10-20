@@ -13,9 +13,9 @@ Upravte projekt L3_Exercise_Solution:
 
 Ověření - musí fungovat stejně jako 'mnou předdefinované' barvy... čili po vybraní v drop downu a kliknutí na tlačítko show selected color se vykresli.
 
-7) pridejte label, ktery bude po kazde zmene v inputech (R,G,B) ukazovat jeji hodnotu v html codu (hexadecimal)
+7) Přidejte label, který bude po každé změně v inputech (R,G,B) ukazovat její hodnotu v html kódu (hexadecimal).
 
-8) pridejte tlacitko, ktere vsechny barvy v kolekci _colors ulozi jako html code do souboru colors.txt ve fromatu:
-	 "pojmenovani html code"
+8) Přidejte tlačítko, které uloží všechny barvy v kolekci _colors jako html kód do souboru colors.txt (je jedno, kde bude uložený) ve formátu:
+	 "jméno_barvy html_code"
 
-9) pridejte tlacitko, ktere nacte barvy ze souboru colors.txt a ulozi je do kolekce i drop down listu (jen pokud jiz v kolekci nejsou)
+9) Přidejte tlačítko, které načte barvy ze souboru colors.txt a uloží je do kolekce (jen pokud již v kolekci nejsou - opět se řídíme podle jmen) a následně aktualizujte drop down list.
