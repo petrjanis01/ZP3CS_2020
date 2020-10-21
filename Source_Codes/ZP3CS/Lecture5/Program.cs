@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace Lecture5
 {
@@ -16,7 +17,7 @@ namespace Lecture5
         public static void ReadFromDocumentByLine()
         {
             //var path = "path\\to\\document";
-            var path = @"D:\test.txt";
+            var path = "D:\\test.txt";
 
             var sr = new StreamReader(path);
 
@@ -51,13 +52,11 @@ namespace Lecture5
 
             using (var sr = new StreamReader(path))
             {
-                var character = sr.Read();
-
                 while (sr.EndOfStream == false)
                 {
-                    Console.WriteLine((char)character);
+                    var character = sr.Read();
 
-                    character = sr.Read();
+                    Console.WriteLine((char)character);
                 }
             }
         }
@@ -116,13 +115,10 @@ namespace Lecture5
 
         public static Address ParseLineToAddress(string line)
         {
+            line = line.Replace("\"", string.Empty);
             var addressComponents = line.Split(",");
-            var address = new Address();
+            var address = new Address(addressComponents[2], addressComponents[3]);
 
-            address.FirstName = addressComponents[0];
-            address.Surname = addressComponents[1];
-            address.Street = addressComponents[2];
-            address.City = addressComponents[3];
             address.CityCode = addressComponents[4];
             address.Zip = addressComponents[5];
 
@@ -140,9 +136,12 @@ namespace Lecture5
                        "\"longitude\": 17.249870" +
                        "}";
 
-            // TODO serialize/deserialize
+            var coordinates = JsonConvert.DeserializeObject<Coordinates>(json);
 
-            // TODO add coordinates to address
+            var json1 = JsonConvert.SerializeObject(coordinates);
+
+            Console.WriteLine(json1);
+
         }
 
         #endregion

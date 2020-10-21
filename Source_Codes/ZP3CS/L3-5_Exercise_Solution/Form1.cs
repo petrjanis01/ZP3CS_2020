@@ -65,7 +65,6 @@ namespace L3_Exercise_Solution
             ColorChanged();
         }
 
-        // Easier ways to do this. But not cover on lecture yet.
         private void ValidateTextBoxValue(TextBox textBox)
         {
             try
