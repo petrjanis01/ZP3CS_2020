@@ -2,7 +2,7 @@
 2) Vytvořte vhodný objekt pro reprezentaci uživatele.
 3) Načtěte obsah souboru clients.json do kolekce těchto objektů.
 4) Upravte objekt tak, aby do něj šla uložit i adresa (mnou vytvořený objekt Address).
-5) Hodnoty pro adresy načtěte ze souboru addresses.json (mnou již připravená metoda).
+5) Hodnoty pro adresy načtěte ze souboru addresses.csv (mnou již připravená metoda).
 6) Vytvořte nový soubor clients_with_addresses.json a zapište do něj ve formátu JSON kolekci těchto objektů.
 
 Ověření - po opětovném načtení clients_with_addresses.json do kolekce objektů se musí data shodovat.
