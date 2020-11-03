@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace L3_Exercise_Solution
@@ -8,6 +9,18 @@ namespace L3_Exercise_Solution
     public partial class Form1 : Form
     {
         private readonly Dictionary<string, Color> _colors;
+
+        private string PathToFileWithColors
+        {
+            get
+            {
+                var basePath = AppContext.BaseDirectory;
+                var clientsFileName = "colors.txt";
+                var path = Path.Combine(basePath, clientsFileName);
+                return path;
+            }
+        }
+
 
         public Form1()
         {
@@ -135,6 +148,44 @@ namespace L3_Exercise_Solution
             else
             {
                 MessageBox.Show(@"Name of color has to be defined and has to be unique.");
+            }
+        }
+
+        private void SaveColorToFileButton_Click(object sender, EventArgs e)
+        {
+            using (var sw = new StreamWriter(PathToFileWithColors))
+            {
+                foreach (var color in _colors)
+                {
+                    var htmlCode = ColorTranslator.ToHtml(color.Value);
+
+                    sw.WriteLine($"{color.Key} {htmlCode}");
+                }
+            }
+        }
+
+        private void LoadColorsFromFileButton_Click(object sender, EventArgs e)
+        {
+            using (var sr = new StreamReader(PathToFileWithColors))
+            {
+                var line = sr.ReadLine();
+
+                while (line != null)
+                {
+                    var lineSplittedByWhiteSpace = line.Split(' ');
+                    var colorName = lineSplittedByWhiteSpace[0];
+                    var colorHtml = lineSplittedByWhiteSpace[1];
+
+                    var color = ColorTranslator.FromHtml(colorHtml);
+
+                    if (_colors.ContainsKey(colorName) == false)
+                    {
+                        _colors.Add(colorName, color);
+                        colorDropDown.Items.Add(colorName);
+                    }
+
+                    line = sr.ReadLine();
+                }
             }
         }
     }

@@ -1,0 +1,4 @@
+1) Vytvořte třídu Employee, která bude dědit z Person. Rozšiřte ji alespoň o jednu vlastnost.
+2) Vytvořte soubor employees.json poskytující data v podobě kolekce objektů Employee.
+3) Upravte stránku EmployeesPage tak, aby načítala data z employees.json.
+4) Upravte vzhled tak, aby vypadal stejně jako na stránce ClientsPage. Zobrazené informace v 'kartičkách' se budou lišit v těch vlastnostech, které jste přidali v prvním kroku.

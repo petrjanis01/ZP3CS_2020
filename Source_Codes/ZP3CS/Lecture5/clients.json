@@ -1,0 +1,26 @@
+[
+    {
+        "firstName": "Oliver",
+        "surname": "Brown",
+        "email": "OliverBrown@fakeDomain.com",
+        "phoneNumber": "+420111111111"
+    },
+    {
+        "firstName": "Olivia",
+        "surname": "Davis",
+        "email": "OliviaDavis@fakeDomain.com",
+        "phoneNumber": "+420111111111"
+    },
+    {
+        "firstName": "Sophia",
+        "surname": "Williams",
+        "email": "SophiaWilliams@fakeDomain.com",
+        "phoneNumber": "+420111111111"
+    },
+    {
+        "firstName": "William",
+        "surname": "Williams",
+        "email": "WilliamWilliams@fakeDomain.com",
+        "phoneNumber": "+420111111111"
+    }
+]

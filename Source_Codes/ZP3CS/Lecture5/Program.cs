@@ -9,7 +9,8 @@ namespace Lecture5
     {
         static void Main(string[] args)
         {
-            GetClientsFromJson();
+            var clients = LoadClients();
+            SaveClients(clients);
         }
 
         #region Basics
@@ -142,6 +143,45 @@ namespace Lecture5
 
             Console.WriteLine(json1);
 
+        }
+
+        #endregion
+
+        #region ExerciseSolution
+
+        public static List<Client> LoadClients()
+        {
+            var basePath = AppContext.BaseDirectory;
+            var clientsFileName = "clients.json";
+            var path = Path.Combine(basePath, clientsFileName);
+
+            var clients = new List<Client>();
+            using (var sr = new StreamReader(path))
+            {
+                var content = sr.ReadToEnd();
+                clients = JsonConvert.DeserializeObject<List<Client>>(content);
+            }
+
+            var addresses = GetAddressesFromCsv();
+            for (int i = 0; i < clients.Count; i++)
+            {
+                clients[i].Address = addresses[0];
+            }
+
+            return clients;
+        }
+
+        public static void SaveClients(List<Client> clients)
+        {
+            var basePath = AppContext.BaseDirectory;
+            var clientsFileName = "clients_with_addresses.json";
+            var path = Path.Combine(basePath, clientsFileName);
+            var json = JsonConvert.SerializeObject(clients);
+
+            using (var sw = new StreamWriter(path))
+            {
+                sw.Write(json);
+            }
         }
 
         #endregion
