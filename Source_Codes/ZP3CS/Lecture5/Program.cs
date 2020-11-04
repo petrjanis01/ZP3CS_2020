@@ -149,29 +149,29 @@ namespace Lecture5
 
         #region ExerciseSolution
 
-        public static List<Client> LoadClients()
+        public static List<User> LoadClients()
         {
             var basePath = AppContext.BaseDirectory;
             var clientsFileName = "clients.json";
             var path = Path.Combine(basePath, clientsFileName);
 
-            var clients = new List<Client>();
+            var clients = new List<User>();
             using (var sr = new StreamReader(path))
             {
                 var content = sr.ReadToEnd();
-                clients = JsonConvert.DeserializeObject<List<Client>>(content);
+                clients = JsonConvert.DeserializeObject<List<User>>(content);
             }
 
             var addresses = GetAddressesFromCsv();
             for (int i = 0; i < clients.Count; i++)
             {
-                clients[i].Address = addresses[0];
+                clients[i].Address = addresses[i];
             }
 
             return clients;
         }
 
-        public static void SaveClients(List<Client> clients)
+        public static void SaveClients(List<User> clients)
         {
             var basePath = AppContext.BaseDirectory;
             var clientsFileName = "clients_with_addresses.json";

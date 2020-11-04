@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lecture5
 {
-    public class Client
+    public class User
     {
         public string FirstName { get; set; }
 

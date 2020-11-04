@@ -17,5 +17,10 @@ namespace Lecture6.Views
         {
             MainContentFrame.Content = new ClientsPage();
         }
+
+        private void EmployeeMenuButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            MainContentFrame.Content = new EmployeesPage();
+        }
     }
 }

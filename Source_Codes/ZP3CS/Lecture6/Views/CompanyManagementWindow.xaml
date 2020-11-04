@@ -4,8 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
-	<!--TODO min width/height-->
+        Title="Window1" Height="450" Width="800" MinWidth="700">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
@@ -18,7 +17,7 @@
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="50px"/>
+			<ColumnDefinition Width="50"/>
 			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
 
@@ -27,13 +26,12 @@
 			<Button Name="ClientMenuButton" Style="{StaticResource MenuButton}" Click="ClientMenuButton_OnClick">
 				<ContentControl Content="{StaticResource ClientIcon}"/>
 			</Button>
-			<!--TODO navigation-->
-			<Button Name="EmployeeMenuButton" Style="{StaticResource MenuButton}">
+			<Button Name="EmployeeMenuButton" Style="{StaticResource MenuButton}" Click="EmployeeMenuButton_OnClick">
 				<ContentControl Content="{StaticResource EmployeeIcon}"/>
 			</Button>
 		</StackPanel>
 
 		<!--Content-->
-		<Frame x:Name="MainContentFrame" Grid.Row="0" Grid.Column="1" />
+		<Frame x:Name="MainContentFrame" Grid.Row="0" Grid.Column="1" NavigationUIVisibility="Hidden" />
 	</Grid>
 </Window>
