@@ -1,0 +1,9 @@
+- Vytvořte/navrhněte třídy pro bankovní účet (běžný, spořící, úvěrový). 
+- Napište metody pro vyber, vklad a úročení (jednou za období závisející na údaji, kdy účet vznikl).
+- Běžný účet může jít při výběru 'do mínusu' podle hodnoty definované při vzniku účtu.
+- Bankovní účet bude vždy patřit jednomu klientovi, ale klient může mít více účtů (zařiďte, aby se z pohledu klienta dalo podívat na všechny jeho účty).
+- Zaměstnanec banky má pod sebou nějaké klienty a může kontrolovat jejich účty.
+- Banka samotná ví o všech svých zaměstnancích a klientech.
+- Úvěrový účet může mít pouze klient, který má běžný účet.
+
+!Využijte správně dědičnosti a virtuálních metod za účelem redukce duplicitního kódu!

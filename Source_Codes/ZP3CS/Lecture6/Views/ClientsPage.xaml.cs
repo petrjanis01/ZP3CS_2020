@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Controls;
+using Lecture6.Data;
 using Lecture6.Models;
 using Newtonsoft.Json;
 
@@ -16,11 +17,12 @@ namespace Lecture6.Views
         {
             InitializeComponent();
 
-            var clients = LoadClients();
+            var clients = DataLoader.LoadDataFromJson<Client>("clients.json");
 
             ClientsControl.ItemsSource = clients;
         }
 
+        // TODO remove this not needed now - show difference
         public List<Client> LoadClients()
         {
             var basePath = AppContext.BaseDirectory;
@@ -36,6 +38,5 @@ namespace Lecture6.Views
 
             return clients;
         }
-
     }
 }

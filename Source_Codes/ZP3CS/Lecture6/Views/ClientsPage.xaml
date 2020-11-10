@@ -5,12 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="UsersPage">
+      Title="ClientsPage">
 
 	<Page.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
-				<ResourceDictionary Source="pack://application:,,,/Styles/Clients.xaml"/>
+				<ResourceDictionary Source="pack://application:,,,/Styles/Profiles.xaml"/>
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 	</Page.Resources>
@@ -24,7 +24,7 @@
 			</ItemsControl.ItemsPanel>
 			<ItemsControl.ItemTemplate >
 				<DataTemplate>
-					<Border Style="{StaticResource ClientCardBorder}">
+					<Border Style="{StaticResource ProfileCardBorder}">
 						<Grid HorizontalAlignment="Center">
 							<Grid.ColumnDefinitions>
 								<ColumnDefinition Width="*"/>

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Lecture5
+﻿namespace Lecture5
 {
-    public class User
+    public class Client
     {
         public string FirstName { get; set; }
 

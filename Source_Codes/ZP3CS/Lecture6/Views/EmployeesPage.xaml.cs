@@ -1,4 +1,6 @@
 ﻿using System.Windows.Controls;
+using Lecture6.Data;
+using Lecture6.Models;
 
 namespace Lecture6.Views
 {
@@ -10,6 +12,9 @@ namespace Lecture6.Views
         public EmployeesPage()
         {
             InitializeComponent();
+            var employees = DataLoader.LoadDataFromJson<Employee>("employees.json");
+
+            ClientsControl.ItemsSource = employees;
         }
     }
 }
