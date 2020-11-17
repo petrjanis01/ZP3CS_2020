@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Lecture7.Shapes
 {
-    public class Rectangle
+    public class Rectangle : IShape
     {
+        public void Draw()
+        {
+            Console.WriteLine("Draw rectangle");
+        }
     }
 }

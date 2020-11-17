@@ -1,0 +1,13 @@
+Popis dat:
+- Kontinenty řádky 1-6 (jméno, kód)
+- Státy řádky 7-199 (ID hlavního města, Jméno, kód kontinentu [pokud se stát nachází na více kontinentech jsou kódy zapsaný po sobě bez mezery], populace, roční přírůstek populace, hustota osídlení, rozloha, průměrný počet dětí, průměrný věk, procento lidí žijících v městech)
+- Města řádky 200-392 (ID, jméno)
+
+1) Vytvořte třídy pro reprezentaci dat (Kontinent, Stát, Město).
+2) Načtěte do kolekcí pro tyto třídy data z csv.
+3) Napište LINQ dotazy vybírající z kolekcí tyto informace: 
+- Stát, ve kterém se nachází město Kingstown.
+- Počet států, které mají víc než miliardu obyvatel.
+- Kolekci jmen všech států světa.
+- Kolekci jmen států, které jsou na více než jednom kontinentu.
+- Kolekci jmen států, které mají větší rozlohu než je průměrná rozloha států na daném kontinentu.

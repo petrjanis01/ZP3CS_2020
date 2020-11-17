@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Lecture7.DataClasses;
+using Lecture7.Shapes;
 
 namespace Lecture7
 {
@@ -8,46 +9,6 @@ namespace Lecture7
     {
         static void Main(string[] args)
         {
-            var employee = CreateEmployee();
-
-            Console.WriteLine(employee.ToString());
-            Console.WriteLine($"Tax calculated from his salary is: {employee.CalculateTax()}");
-
-            var customer = CreateCustomerWithOrders();
-
-            Console.WriteLine(customer.ToString());
-            Console.WriteLine($"Tax calculated from all customer's orders: {customer.CalculateTax()}");
-
-            var people = new List<Person>();
-            people.Add(employee);
-            people.Add(customer);
-
-            foreach (var person in people)
-            {
-                Console.WriteLine(person.ToString());
-            }
-
-            BoxingUnboxingExample(employee);
-            BoxingUnboxingExample(customer);
-            BoxingUnboxingExample(customer.Orders[0]);
-        }
-
-        static void BoxingUnboxingExample(object myObject)
-        {
-            if (myObject is Employee)
-            {
-                var employee = (Employee)myObject;
-                Console.WriteLine($"This employee is {employee}");
-            }
-            else if (myObject is Order)
-            {
-                var order = (Order)myObject;
-                Console.WriteLine($"Price of this order is {order.Price}");
-            }
-            else if (myObject is Customer customer)
-            {
-                Console.WriteLine($"This customer is {customer}");
-            }
         }
 
         static Employee CreateEmployee()
@@ -58,6 +19,9 @@ namespace Lecture7
             employee.MiddleName = "von";
             employee.Salary = 40000;
             employee.BirthDate = new DateTime(1990, 10, 10);
+
+            Console.WriteLine(employee.ToString());
+            Console.WriteLine($"Tax calculated from his salary is: {employee.CalculateTax()}");
 
             return employee;
         }
@@ -78,7 +42,49 @@ namespace Lecture7
                 customer.Orders.Add(order);
             }
 
+            Console.WriteLine(customer.ToString());
+            Console.WriteLine($"Tax calculated from all customer's orders: {customer.CalculateTax()}");
+
             return customer;
+        }
+
+        static void BaseClassTypeExample(Employee employee, Customer customer)
+        {
+            var people = new List<Person>();
+            people.Add(employee);
+            people.Add(customer);
+
+            foreach (var person in people)
+            {
+                Console.WriteLine(person.ToString());
+            }
+        }
+
+        static void BoxingUnboxingExample(object myObject)
+        {
+            if (myObject is Employee)
+            {
+                var employee = (Employee)myObject;
+                Console.WriteLine($"This employee is {employee}");
+            }
+            else if (myObject is Order)
+            {
+                var order = (Order)myObject;
+                Console.WriteLine($"Price of this order is {order.Price}");
+            }
+            else if (myObject is Customer customer)
+            {
+                Console.WriteLine($"This customer is {customer}");
+            }
+        }
+
+        static void InterfaceExample()
+        {
+            IShape circle = new Circle();
+            circle.Draw();
+
+            IShape rectangle = new Rectangle();
+            rectangle.Draw();
         }
     }
 }
