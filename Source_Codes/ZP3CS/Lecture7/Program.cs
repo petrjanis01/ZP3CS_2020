@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Lecture7.DataClasses;
+using DataClasses;
 using Lecture7.Shapes;
 
 namespace Lecture7

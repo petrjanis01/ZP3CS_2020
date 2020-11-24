@@ -1,4 +1,4 @@
-﻿namespace Lecture7.DataClasses
+﻿namespace DataClasses
 {
     public enum Position
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lecture7.DataClasses
+namespace DataClasses
 {
     public class Employee : Person
     {

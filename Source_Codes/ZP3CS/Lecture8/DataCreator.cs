@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using Lecture7.DataClasses;
+using DataClasses;
 
 namespace Lecture8
 {
     public static class DataCreator
     {
-        private static Random _random;
+        private static Random _random = new Random();
 
         private static readonly string[] Names = new[] { "Liam", "Noah", "William", "James", "Oliver", "Benjamin", "Lucas", "Isabella", "Sophia", "Charlotte", "Mia" };
         private static readonly string[] Surnames = new[] { "Smith", " Johnson", "Williams", "Jones", "Brown", "Davis", "Miller" };
@@ -30,7 +29,7 @@ namespace Lecture8
             {
                 Name = name,
                 Surname = surname,
-                BirthDate = new DateTime(_random.Next(1950, 200), _random.Next(1, 12), _random.Next(1, 28))
+                BirthDate = new DateTime(_random.Next(1950, 2000), _random.Next(1, 12), _random.Next(1, 28))
             };
 
             for (var i = 0; i < _random.Next(1, 30); i++)

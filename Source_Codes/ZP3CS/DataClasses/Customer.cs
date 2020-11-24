@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 
-namespace Lecture7.DataClasses
+namespace DataClasses
 {
     public class Customer : Person
     {

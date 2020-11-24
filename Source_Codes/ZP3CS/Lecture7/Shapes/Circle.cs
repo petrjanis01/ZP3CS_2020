@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
-using Lecture7.DataClasses;
 
 namespace Lecture7.Shapes
 {

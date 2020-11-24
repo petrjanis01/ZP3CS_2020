@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Lecture7.DataClasses;
+using DataClasses;
 
 namespace Lecture8
 {
     class Program
     {
-        // TODO re-use code from previous lecture
         static void Main(string[] args)
         {
             var customers = DataCreator.CreateCustomers();
+            GetTop3SpendingCustomers(customers);
         }
 
         static List<Customer> GetAllCustomersWithName(List<Customer> customers, string name)
@@ -18,13 +18,15 @@ namespace Lecture8
             // LINQ/extension method query
             var customersWithName = customers.Where(c => c.Name.Equals(name)).ToList();
 
+            PrintCustomers(customersWithName);
+
             // for-each equivalent
             var customersWithName1 = new List<Customer>();
             foreach (var customer in customers)
             {
                 if (customer.Name.Equals(name))
                 {
-                    customers.Add(customer);
+                    customersWithName1.Add(customer);
                 }
             }
 
@@ -35,6 +37,7 @@ namespace Lecture8
         {
             // LINQ/extension method query
             var customersWithName = customers.Where(c => c.Name.Equals(name) && c.Surname.Equals(surname)).ToList();
+            PrintCustomers(customersWithName);
 
             // Same result but with chained extension methods.
             var customersWithName1 = customers
@@ -48,7 +51,7 @@ namespace Lecture8
             {
                 if (customer.Name.Equals(name) && customer.Surname.Equals(surname))
                 {
-                    customers.Add(customer);
+                    customersWithName2.Add(customer);
                 }
             }
 
@@ -64,17 +67,23 @@ namespace Lecture8
         {
             var totalCount = customers.Sum(c => c.Orders.Count);
 
+            Console.WriteLine(totalCount);
             return totalCount;
         }
 
         static Customer GetFirstCustomerWithOrdersCountIfExists(List<Customer> customers, int ordersCount)
         {
             var customer = customers.FirstOrDefault(c => c.Orders.Count == ordersCount);
+
             var customer1 = customers.Where(c => c.Orders.Count == ordersCount).FirstOrDefault();
 
             if (customer == null)
             {
                 Console.WriteLine($"Customer with {ordersCount} orders doesn't exists");
+            }
+            else
+            {
+                Console.WriteLine(customer.ToString());
             }
 
             return customer;
@@ -85,7 +94,7 @@ namespace Lecture8
             var mostOrdersCount = customers.Max(c => c.Orders.Count);
             var customer = customers.First(c => c.Orders.Count == mostOrdersCount);
 
-            // TODO change this
+            var customer1 = customers.OrderByDescending(c => c.Orders.Count).First();
             return customer;
         }
 
@@ -94,7 +103,7 @@ namespace Lecture8
             var leastOrdersCount = customers.Min(c => c.Orders.Count);
             var customer = customers.First(c => c.Orders.Count == leastOrdersCount);
 
-            // TODO change this
+            var customer1 = customers.OrderBy(c => c.Orders.Count).First();
             return customer;
         }
 

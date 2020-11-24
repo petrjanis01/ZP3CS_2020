@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DataClasses\" />
+    <ProjectReference Include="..\DataClasses\DataClasses.csproj" />
   </ItemGroup>
 
 </Project>
